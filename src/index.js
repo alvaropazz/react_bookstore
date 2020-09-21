@@ -16,12 +16,12 @@ const getRandomInt = (min, max) => {
 
 const bookObj = {
   books: [{
-    id: getRandomInt(0, 50),
+    id: getRandomInt(0, 10000),
     title: 'First',
     category: 'Fiction',
   },
   {
-    id: getRandomInt(51, 100),
+    id: getRandomInt(0, 10000),
     title: 'Second',
     category: 'Biography',
   }],
