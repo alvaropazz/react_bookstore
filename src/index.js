@@ -1,3 +1,5 @@
+/* eslint-disable no-param-reassign */
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -7,10 +9,9 @@ import App from './components/App';
 import booksReducer from './reducers/books';
 
 const getRandomInt = (min, max) => {
-  Math.floor(Math.random()
-                                    * (Math.floor(max)
-                                     - Math.ceil(min))
-                                     + Math.ceil(min));
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min);
 };
 
 const bookObj = {
