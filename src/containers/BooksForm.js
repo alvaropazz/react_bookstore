@@ -20,15 +20,15 @@ class BooksForm extends React.Component {
 
   handleChange(e) {
     e.preventDefault();
-    if(e.target.name === 'title') {
+    if (e.target.name === 'title') {
       this.setState({
         title: e.target.value,
-      })
+      });
     } else {
       this.setState({
         category: e.target.value,
-      })
-    };
+      });
+    }
   }
 
   handleSubmit(e) {
