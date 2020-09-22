@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Books Component
 - Correct handleChange on booksForm component
 - Add filter functionality
+- Added UI
 
 ### Fixed 
 - Moved Books List and Book Form to containers
