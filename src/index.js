@@ -4,7 +4,7 @@ import './index.css';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import App from './components/App';
-import booksReducer from './reducers/books';
+import rootReducer from './reducers/index';
 import { getRandomInt } from './utils/getRandomInt';
 
 const books = [
@@ -20,7 +20,7 @@ const books = [
   },
 ];
 
-const bookStore = createStore(booksReducer, { books });
+const bookStore = createStore(rootReducer, { books });
 
 ReactDOM.render(
   <React.StrictMode>

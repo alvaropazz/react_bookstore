@@ -2,9 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import BookComponent from '../components/Book';
-import { removeBook } from '../actions/index';
-import CategoryFilter from '../components/CategoryFilter';
-import { changeFilter } from '../actions/index';
+import { removeBook, changeFilter } from '../actions/index';
+import { CategoryFilter } from '../components/CategoryFilter';
 
 class BooksList extends React.Component {
   constructor(props) {
@@ -26,10 +25,10 @@ class BooksList extends React.Component {
 
   render() {
     const { books, filter } = this.props;
-    const filtered = filter === 'All'? books : books.filter(x=> x.category===filter)
+    const filtered = filter === 'All' ? books : books.filter(x => x.category === filter);
     return (
       <div>
-        <CategoryFilter handleFilterChange={this.handleFilterChange}/>
+        <CategoryFilter handleFilterChange={this.handleFilterChange} />
         <table>
           <thead>
             <tr>
@@ -56,23 +55,23 @@ class BooksList extends React.Component {
 
 const mapStateToProps = state => ({
   books: state.books,
-  filter: state.filter
+  filter: state.filter,
 });
 
 const mapDispatchToProps = dispatch => ({
   removeBook: book => dispatch(removeBook(book)),
-  changeFilter: book => dispatch(changeFilter(book))
+  changeFilter: book => dispatch(changeFilter(book)),
 });
 
 BooksList.propTypes = {
   books: PropTypes.instanceOf(Object).isRequired,
   removeBook: PropTypes.instanceOf(Function).isRequired,
   changeFilter: PropTypes.instanceOf(Function).isRequired,
-  filter: PropTypes.string
+  filter: PropTypes.string,
 };
 
 BooksList.defaultProps = {
-  filter: 'All'
-}
+  filter: 'All',
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(BooksList);
