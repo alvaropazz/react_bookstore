@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { createBook } from '../actions/index';
+import './BookForm.css';
 
 import { getRandomInt } from '../utils/getRandomInt';
 
@@ -50,25 +51,27 @@ class BooksForm extends React.Component {
     const { title } = this.state;
     return (
       <form onSubmit={this.handleSubmit}>
-        <label htmlFor="title-text">
-          Title:
-          <input
-            id="title-text"
-            type="text"
-            name="title"
-            value={title}
-            onChange={this.handleChange}
-            required
-          />
-        </label>
-
-        <label htmlFor="book-categories">
-          Categories:
-          <select name="categories" id="book-categories" onChange={this.handleChange}>
-            {categories.map(x => <option key={x} value={x}>{x}</option>)}
-          </select>
-        </label>
-        <button type="submit">Submit</button>
+        <h1 className="addbooktitle">Add New Book</h1>
+        <div className="input-wrapper">
+          <label htmlFor="title-text">
+            <input
+              id="title-text"
+              type="text"
+              name="title"
+              value={title}
+              onChange={this.handleChange}
+              required
+              placeholder="Title"
+            />
+          </label>
+          <label htmlFor="book-categories" className="newbook-label">
+            CATEGORIES:
+            <select name="categories" id="book-categories" className="categories" onChange={this.handleChange}>
+              {categories.map(x => <option key={x} value={x}>{x}</option>)}
+            </select>
+          </label>
+          <button className="addbookbutton" type="submit">Add Book</button>
+        </div>
       </form>
     );
   }

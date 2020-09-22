@@ -1,0 +1,48 @@
+form {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 40px;
+}
+
+.addbooktitle {
+  align-self: flex-start;
+  margin-left: 40px;
+  font-size: 26px;
+  color: gray;
+}
+
+.input-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#title-text {
+  width: 300px;
+  height: 45px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  padding: 0 5%;
+}
+
+.categories {
+  margin-left: 10px;
+  width: 200px;
+  height: 45px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+}
+
+.addbookbutton {
+  width: 100px;
+  height: 45px;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #0290ff;
+}
+
+.newbook-label {
+  font-size: 14px;
+}

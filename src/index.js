@@ -11,7 +11,7 @@ const books = [
   {
     id: getRandomInt(0, 5000),
     title: 'First',
-    category: 'Fiction',
+    category: 'Action',
   },
   {
     id: getRandomInt(5001, 10000),

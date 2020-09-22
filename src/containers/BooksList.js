@@ -1,4 +1,5 @@
 import React from 'react';
+import './BookList.css';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import BookComponent from '../components/Book';
@@ -28,26 +29,23 @@ class BooksList extends React.Component {
     const filtered = filter === 'All' ? books : books.filter(x => x.category === filter);
     return (
       <div>
-        <CategoryFilter handleFilterChange={this.handleFilterChange} />
-        <table>
-          <thead>
-            <tr>
-              <th>Book ID</th>
-              <th>Title</th>
-              <th>Category</th>
-              <th>Options</th>
-            </tr>
-          </thead>
-          <tbody>
-            {filtered.map(x => (
-              <BookComponent
-                key={x.id}
-                book={x}
-                handleRemoveBook={() => this.handleRemoveBook(x)}
-              />
-            ))}
-          </tbody>
-        </table>
+        <nav className="main-nav">
+          <h1>Bookstore CMS</h1>
+          <CategoryFilter handleFilterChange={this.handleFilterChange} />
+        </nav>
+        <div className="table container">
+          <table>
+            <tbody>
+              {filtered.map(x => (
+                <BookComponent
+                  key={x.id}
+                  book={x}
+                  handleRemoveBook={() => this.handleRemoveBook(x)}
+                />
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     );
   }

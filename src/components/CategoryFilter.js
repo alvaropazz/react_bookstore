@@ -1,18 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './CategoryFilter.css';
 
 const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
 export const CategoryFilter = ({ handleFilterChange }) => (
-  <div>
+  <div className="categories-selector">
     <label htmlFor="book-categories">
-      Categories:
+      CATEGORIES:
       <select
         name="categories"
         id="book-categories"
         onChange={event => handleFilterChange(event)}
+        className="filter-selector"
       >
-        <option key="ALL" value="ALL">All</option>
+        <option key="ALL" value="All">All</option>
         {categories.map(x => <option key={x} value={x}>{x}</option>)}
       </select>
     </label>
