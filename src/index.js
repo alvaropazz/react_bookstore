@@ -1,5 +1,3 @@
-/* eslint-disable no-param-reassign */
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -7,27 +5,22 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import App from './components/App';
 import booksReducer from './reducers/books';
+import { getRandomInt } from './utils/getRandomInt';
 
-const getRandomInt = (min, max) => {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min) + min);
-};
-
-const bookObj = {
-  books: [{
-    id: getRandomInt(0, 10000),
+const books = [
+  {
+    id: getRandomInt(0, 5000),
     title: 'First',
     category: 'Fiction',
   },
   {
-    id: getRandomInt(0, 10000),
+    id: getRandomInt(5001, 10000),
     title: 'Second',
     category: 'Biography',
-  }],
-};
+  },
+];
 
-const bookStore = createStore(booksReducer, bookObj);
+const bookStore = createStore(booksReducer, { books });
 
 ReactDOM.render(
   <React.StrictMode>
