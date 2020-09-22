@@ -19,10 +19,16 @@ class BooksForm extends React.Component {
   }
 
   handleChange(e) {
-    // e.preventDefault();
-    this.setState({
-      title: e.target.value,
-    });
+    e.preventDefault();
+    if(e.target.name === 'title') {
+      this.setState({
+        title: e.target.value,
+      })
+    } else {
+      this.setState({
+        category: e.target.value,
+      })
+    };
   }
 
   handleSubmit(e) {
@@ -58,7 +64,7 @@ class BooksForm extends React.Component {
 
         <label htmlFor="book-categories">
           Categories:
-          <select name="categories" id="book-categories">
+          <select name="categories" id="book-categories" onChange={this.handleChange}>
             {categories.map(x => <option key={x} value={x}>{x}</option>)}
           </select>
         </label>
