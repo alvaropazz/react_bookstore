@@ -1,4 +1,4 @@
-# Calc-eat
+# BookStore App
 
 <br />
 <p align="center">
@@ -24,7 +24,7 @@
 
 ## Table Of Contents
 
-- [Calc-eat](#calc-eat)
+- [BookStore App](#bookstore-app)
   - [Table Of Contents](#table-of-contents)
   - [Built With](#built-with)
   - [Usage](#usage)
