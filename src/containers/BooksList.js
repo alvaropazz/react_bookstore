@@ -28,12 +28,12 @@ class BooksList extends React.Component {
     const { books, filter } = this.props;
     const filtered = filter === 'All' ? books : books.filter(x => x.category === filter);
     return (
-      <div>
+      <div className="book-list-container">
         <nav className="main-nav">
           <h1>Bookstore CMS</h1>
           <CategoryFilter handleFilterChange={this.handleFilterChange} />
         </nav>
-        <div className="table container">
+        <div className="table-container">
           <table>
             <tbody>
               {filtered.map(x => (

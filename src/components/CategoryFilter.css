@@ -14,4 +14,8 @@
 
 .filter-selector {
   margin-left: 10px;
+  -webkit-appearance: none;
+  border-radius: 4px;
+  padding: 3px 0 3px 5px;
+  width: 100px;
 }

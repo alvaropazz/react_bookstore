@@ -2,8 +2,9 @@ tr {
   display: flex;
   flex-direction: column;
   align-items: baseline;
-  padding: 1% 5%;
+  padding: 1% 0;
   height: 100px;
+  margin-bottom: 40px;
   justify-content: space-around;
 }
 
@@ -17,10 +18,82 @@ tr {
   font-weight: bold;
 }
 
-.remove-button {
-  border: 1px solid #0290ff;
+.button {
+  border: none;
   border-radius: 4px;
-  padding: 3px;
   color: #0290ff;
   background-color: #fff;
+}
+
+.button-separator {
+  color: gray;
+  font-size: 16px;
+  padding: 0 8px;
+}
+
+.bookinfocontainer {
+  display: flex;
+  width: 100%;
+  background-color: #fff;
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.circle {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 5px;
+}
+
+.main-book-container {
+  display: flex;
+  flex-direction: column;
+  flex: 40%;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.progress-book-container {
+  flex: 30%;
+  display: flex;
+  align-items: center;
+}
+
+.progress-info-book-container {
+  flex: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.chapter-button {
+  width: 140px;
+  height: 30px;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #0290ff;
+}
+
+.progress-text {
+  margin-left: 25px;
+  text-align: left;
+}
+
+.progress-text :nth-child(1) {
+  margin: 0;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.progress-text :nth-child(2) {
+  margin: 0;
+  font-size: 20px;
+}
+
+.chapter-info {
+  color: gray;
 }
