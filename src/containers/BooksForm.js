@@ -1,14 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import { createBook } from '../actions/index';
+
+import { getRandomInt } from '../utils/getRandomInt';
 
 const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
-export class BooksForm extends React.Component {
+class BooksForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      id: '',
       title: '',
       category: categories[0],
     };
@@ -17,7 +19,7 @@ export class BooksForm extends React.Component {
   }
 
   handleChange(e) {
-    e.preventDefault();
+    // e.preventDefault();
     this.setState({
       title: e.target.value,
     });
@@ -25,10 +27,14 @@ export class BooksForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    createBook(this.state);
+    const { title, category } = this.state;
+    const id = getRandomInt(99, 10000);
+    const { createBook } = this.props;
+    createBook({
+      title, category, id,
+    });
     e.target.reset();
     this.setState({
-      id: 0,
       title: '',
       category: categories[0],
     });
@@ -61,6 +67,10 @@ export class BooksForm extends React.Component {
     );
   }
 }
+
+BooksForm.propTypes = {
+  createBook: PropTypes.func.isRequired,
+};
 
 const mapDispatchToProps = dispatch => ({
   createBook: book => {

@@ -1,19 +1,18 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import BookComponent from './Book';
-import { removeBook } from '../actions';
+import BookComponent from '../components/Book';
+import { removeBook } from '../actions/index';
 
-export class BooksList extends React.Component {
+class BooksList extends React.Component {
   constructor(props) {
     super(props);
     this.handleRemoveBook = this.handleRemoveBook.bind(this);
   }
 
   handleRemoveBook(book) {
-    const { removeBook } = this.props;
-    const mProps = this.props;
-    const idx = (mProps.books).findIndex(i => i === book);
+    const { removeBook, books } = this.props;
+    const idx = (books).findIndex(i => i === book);
     removeBook(idx);
   }
 
