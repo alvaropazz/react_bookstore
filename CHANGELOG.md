@@ -10,6 +10,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Books List and Form
 - Books Component
+- Correct handleChange on booksForm component
+- Add filter functionality
 
 ### Fixed 
 - Moved Books List and Book Form to containers
+- Moved all to initial array from HTML
