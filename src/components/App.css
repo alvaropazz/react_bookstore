@@ -1,3 +1,17 @@
 .App {
+  display: flex;
+  margin: 30px auto auto auto;
+  flex-direction: column;
   text-align: center;
+  width: 1000px;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
+  background-color: #f5f6fa;
+}
+
+button:disabled {
+  color: #121212;
+  opacity: 0.5;
+  cursor: not-allowed;
 }
