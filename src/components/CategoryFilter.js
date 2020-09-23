@@ -6,18 +6,15 @@ const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learnin
 
 export const CategoryFilter = ({ handleFilterChange }) => (
   <div className="categories-selector">
-    <label htmlFor="book-categories">
-      CATEGORIES:
-      <select
-        name="categories"
-        id="book-categories"
-        onChange={event => handleFilterChange(event)}
-        className="filter-selector"
-      >
-        <option key="ALL" value="All">All</option>
-        {categories.map(x => <option key={x} value={x}>{x}</option>)}
-      </select>
-    </label>
+    <select
+      name="categories"
+      id="book-categories"
+      onChange={event => handleFilterChange(event)}
+      className="filter-selector"
+    >
+      <option key="ALL" value="All">CATEGORIES</option>
+      {categories.map(x => <option key={x} value={x}>{x}</option>)}
+    </select>
   </div>
 );
 
