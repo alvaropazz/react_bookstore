@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import BookComponent from '../components/Book';
 import { removeBook, changeFilter } from '../actions/index';
 import { CategoryFilter } from '../components/CategoryFilter';
+import logo from '../assets/logo.png';
 
 class BooksList extends React.Component {
   constructor(props) {
@@ -32,6 +33,10 @@ class BooksList extends React.Component {
         <nav className="main-nav">
           <h1>Bookstore CMS</h1>
           <CategoryFilter handleFilterChange={this.handleFilterChange} />
+          <h3 className="booksHeader">BOOKS</h3>
+          <div className="imgHeader">
+            <img className="logo" src={logo} alt="logo" />
+          </div>
         </nav>
         <div className="table-container">
           <table>
