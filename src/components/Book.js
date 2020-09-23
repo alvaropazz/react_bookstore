@@ -11,11 +11,11 @@ const BookComponent = ({ book, handleRemoveBook }) => (
         <td className="book-title">{book.title}</td>
         <td className="book-author">Author Name</td>
         <td className="options">
-          <button type="button" className="button">Comments</button>
+          <button type="button" className="button" disabled>Comments</button>
           <span className="button-separator">|</span>
           <button type="button" className="button" onClick={handleRemoveBook}>Remove</button>
           <span className="button-separator">|</span>
-          <button type="button" className="button">Edit</button>
+          <button type="button" className="button" disabled>Edit</button>
         </td>
       </div>
       <div className="progress-book-container">
