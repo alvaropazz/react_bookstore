@@ -1,0 +1,22 @@
+.categories-selector {
+  margin-left: 5%;
+  margin-bottom: 5px;
+  height: 16px;
+  opacity: 0.5;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #aaa;
+  display: flex;
+}
+
+.filter-selector {
+  -webkit-appearance: none;
+  border: none;
+  padding: 3px 0 3px 5px;
+  width: 100px;
+  height: 20px;
+}
