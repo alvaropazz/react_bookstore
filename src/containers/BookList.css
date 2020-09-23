@@ -19,6 +19,30 @@
   line-height: normal;
   letter-spacing: normal;
   color: #0290ff;
+  font-family: Montserrat;
+}
+
+.logo {
+  width: 45px;
+  height: 45px;
+}
+
+.imgHeader {
+  margin-left: 40%;
+}
+
+.booksHeader {
+  width: 59px;
+  height: 16px;
+  font-family: Montserrat;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
+  margin-left: 2%;
 }
 
 .table-container {

@@ -36,13 +36,16 @@ tr {
   width: 100%;
   background-color: #fff;
   margin-top: 30px;
-  padding: 20px;
+  padding: 1% 5%;
 }
 
 .circle {
   width: 68px;
   height: 68px;
+  border-bottom: 10px solid #e8e8e8;
+  border-right: 10px solid #e8e8e8;
   border-radius: 50%;
+  border-color: #e8e8e8 #379cf6 #379cf6 #e8e8e8;
   border-style: solid;
   border-width: 5px;
 }
