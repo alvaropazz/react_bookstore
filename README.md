@@ -35,7 +35,7 @@
   - [Acknowledgments](#acknowledgments)
   - [📝 License](#-license)
 
-![screenshot](./public/app-screenshot.gif)
+![image](https://user-images.githubusercontent.com/58086801/94043997-30dc8680-fd93-11ea-9cbc-91a6b7ae49dd.png)
 
 ## Built With
 
@@ -78,7 +78,7 @@ To have this app on your pc, you need to:
  
 ## Live Demo 
 
-[Live Demo Link](#) :point_left:
+[Live Demo Link](https://react-microverse-bookstore.herokuapp.com/) :point_left:
 
 
 ## Authors
