@@ -1,16 +1,18 @@
 form {
   display: flex;
-  margin-top: 20px;
+  margin: 40px auto;
   flex-direction: column;
   padding-bottom: 40px;
-  background-color: #fff;
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
+  width: 90%;
 }
 
 .addbooktitle {
   align-self: flex-start;
-  margin-left: 80px;
-  font-size: 26px;
+  font-size: 20px;
   color: gray;
+  font-weight: 500;
 }
 
 .input-wrapper {
@@ -19,7 +21,7 @@ form {
 }
 
 #title-text {
-  width: 300px;
+  width: 450px;
   height: 45px;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
@@ -28,8 +30,7 @@ form {
 }
 
 .categories {
-  margin-left: 10px;
-  width: 200px;
+  width: 250px;
   padding-left: 10px;
   height: 45px;
   border-radius: 4px;
@@ -40,7 +41,7 @@ form {
 }
 
 .addbookbutton {
-  width: 100px;
+  width: 150px;
   height: 45px;
   border: none;
   border-radius: 4px;

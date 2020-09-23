@@ -32,15 +32,15 @@ class BooksList extends React.Component {
       <div className="book-list-container">
         <nav className="main-nav">
           <h1>Bookstore CMS</h1>
-          <CategoryFilter handleFilterChange={this.handleFilterChange} />
           <h3 className="booksHeader">BOOKS</h3>
+          <CategoryFilter handleFilterChange={this.handleFilterChange} />
           <div className="imgHeader">
             <img className="logo" src={logo} alt="logo" />
           </div>
         </nav>
         <div className="table-container">
-          <table>
-            <tbody>
+          <div>
+            <div>
               {filtered.map(x => (
                 <BookComponent
                   key={x.id}
@@ -48,8 +48,8 @@ class BooksList extends React.Component {
                   handleRemoveBook={() => this.handleRemoveBook(x)}
                 />
               ))}
-            </tbody>
-          </table>
+            </div>
+          </div>
         </div>
       </div>
     );

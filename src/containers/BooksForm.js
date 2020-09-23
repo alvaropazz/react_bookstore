@@ -51,7 +51,7 @@ class BooksForm extends React.Component {
     const { title } = this.state;
     return (
       <form onSubmit={this.handleSubmit}>
-        <h1 className="addbooktitle">Add New Book</h1>
+        <h1 className="addbooktitle">ADD NEW BOOK</h1>
         <div className="input-wrapper">
           <label htmlFor="title-text">
             <input
@@ -65,7 +65,6 @@ class BooksForm extends React.Component {
             />
           </label>
           <label htmlFor="book-categories" className="newbook-label">
-            CATEGORIES:
             <select name="categories" id="book-categories" className="categories" onChange={this.handleChange}>
               {categories.map(x => <option key={x} value={x}>{x}</option>)}
             </select>
